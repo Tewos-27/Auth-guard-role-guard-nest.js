@@ -79,7 +79,8 @@ export class AuthService {
       access_token: this.jwtService.sign(payload),
     };
   }
-
+// validate user method
+  // This method will check if a user exists by email and return their details without the password
   async validateUser(email: string): Promise<any> {
     const user = await this.prisma.user.findUnique({ where: { email } });
     if (user) {
