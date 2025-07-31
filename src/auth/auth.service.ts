@@ -46,7 +46,8 @@ export class AuthService {
     const { password: _, ...result } = user;
     return result;
   }
-
+// user login method
+  // This method will validate the user's credentials and return a JWT token if successful.
   async login(loginDto: LoginDto) {
     const { email, password } = loginDto;
 
