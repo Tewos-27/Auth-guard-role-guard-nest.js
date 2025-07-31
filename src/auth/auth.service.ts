@@ -11,7 +11,8 @@ export class AuthService {
     private prisma: PrismaService,
     private jwtService: JwtService,
   ) {}
-
+// user registration method
+  // This method will create a new user in the database and assign them a default role.
   async register(registerDto: RegisterDto) {
     const { email, password } = registerDto;
 
