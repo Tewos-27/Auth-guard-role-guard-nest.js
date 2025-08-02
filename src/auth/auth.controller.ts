@@ -6,6 +6,8 @@ import { LoginDto } from './dto/login.dto';
 
 @Controller('auth')
 export class AuthController {
+  // AuthController handles authentication routes
+  // It provides endpoints for user registration and login
   constructor(private readonly authService: AuthService) {}
 
   @Post('register')
