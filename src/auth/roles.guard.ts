@@ -6,7 +6,8 @@ import { ROLES_KEY } from './roles.decorator';
 @Injectable()
 export class RolesGuard implements CanActivate {
   constructor(private reflector: Reflector) {}
-
+// This guard checks if the user has the required roles to access a route
+  // It uses the Reflector to get metadata set by the Roles decorator
   canActivate(context: ExecutionContext): boolean {
     console.log('--- RolesGuard: canActivate method called ---');
     // Get the required roles from the route handler using our decorator
